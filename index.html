@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painted by Morgan</title>
+    <style>
+        /* General Styles */
+        body {
+            text-align: center;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: black;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow to the sunflower */
+        }
+
+        .paint-emoji {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card Container */
+        .card-container {
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 577px;
+            margin: 10px;
+        }
+
+        .card {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Clickable Areas */
+        .clickable-area {
+            position: absolute;
+            background: rgba(255, 255, 255, 0);
+            cursor: pointer;
+        }
+
+        /* Clickable areas for the front card */
+        #instagram { top: 1%; left: 31%; width: 37%; height: 5%; }
+        #follow { top: 25%; left: 54%; width: 30%; height: 4%; }
+        #email { top: 46%; left: 6%; width: 62%; height: 3%; } /* Email clickable area */
+
+        /* Clickable QR code on the back card */
+        #qr-code { top: 22%; left: 19%; width: 61%; height: 41%; }
+
+        /* Wrapper for Cards */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+            .card-container {
+                width: 90%;
+            }
+            .wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+            .card-container {
+                width: 100%;
+            }
+            .wrapper {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🌻 Susy | Bookstagram</h2>
+
+    <div class="wrapper">
+        <div class="card-container">
+            <img src="business-card-front.jpg" alt="Front of Business Card" class="card">
+            <a id="instagram" class="clickable-area" href="https://www.instagram.com/motherlambreads" target="_blank"></a>
+            <a id="follow" class="clickable-area" href="https://www.instagram.com/motherlambreads" target="_blank"></a>
+            <a id="email" class="clickable-area" href="mailto:motherlambreads@gmail.com"></a>
+        </div>
+
+        <div class="card-container">
+            <img src="business-card-back.jpg" alt="Back of Business Card" class="card">
+            <a id="qr-code" class="clickable-area" href="https://www.instagram.com/motherlambreads" target="_blank"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div>&copy; 2025 @MOTHERLAMBREADS. All rights reserved.</div>
+        <div>Designed by <a href="https://www.fiverr.com/s/42R24rx" target="_blank">Hammad @ Gorilla Designs</a></div>
+    </footer>
+
+</body>
+</html>
